@@ -99,7 +99,7 @@ class AppLockAccessibilityService : AccessibilityService() {
                         AccessibilityEvent.TYPE_WINDOWS_CHANGED
                 feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC
                 packageNames = null
-                flags += AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS
+                flags = flags or AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS
             }
 
             Log.d(TAG, "Accessibility service connected")
